@@ -30,7 +30,6 @@ Users can interact with the program through a set of commands, including:
 | df      | index_filter                           | Delete filter - deletes and deallocates the filter at the specified index_filter                     |
 | di      | index_img                              | Delete image - deletes and deallocates the image at the specified index_img                         |
 
-
 ### Example of Functionality
 Here’s an example of how to use the commands to manipulate images:
 
@@ -47,7 +46,7 @@ df 0                   # Delete the filter at index 0
 di 0                   # Delete the image at index 0
 di 0                   # Delete the image at index 0 (second call, after deletion, may be a mistake)
 e                      # Exit the program
-
+```
 ## Getting Started
 To run the Image Processing Project, follow these steps:
 
