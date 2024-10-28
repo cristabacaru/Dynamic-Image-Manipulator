@@ -30,6 +30,24 @@ Users can interact with the program through a set of commands, including:
 | df      | index_filter                           | Delete filter - deletes and deallocates the filter at the specified index_filter                     |
 | di      | index_img                              | Delete image - deletes and deallocates the image at the specified index_img                         |
 
+
+### Example of Functionality
+Here’s an example of how to use the commands to manipulate images:
+
+```plaintext
+l 768 1024 ./cat.bmp   # Load an image "cat.bmp" with dimensions 768x1024
+l 768 1024 ./dog.bmp   # Load another image "dog.bmp" with the same dimensions
+ah 0                   # Apply a horizontal flip to the first image (index 0)
+ac 1 300 300 200 100   # Crop the second image (index 1) starting from (300, 300) with width 200 and height 100
+cf 3 0 1 0 1 1 1 0 1 0  # Create a filter of size 3 with specified values
+af 1 0                 # Apply the filter from index 1 to the image at index 0
+ap 0 1 300 300        # Paste the image from index 1 into index 0 at (300, 300)
+s 0 ./output.bmp      # Save the modified first image as "output.bmp"
+df 0                   # Delete the filter at index 0
+di 0                   # Delete the image at index 0
+di 0                   # Delete the image at index 0 (second call, after deletion, may be a mistake)
+e                      # Exit the program
+
 ## Getting Started
 To run the Image Processing Project, follow these steps:
 
